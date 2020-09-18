@@ -6,8 +6,7 @@
         "composer-plugin-api": "^1.1",
         "symfony/console": "5.1.*",
         "composer/composer": "1.10.*",
-        "hurah/hurah-installer": "*",
-        ""
+        "hurah/hurah-installer": "*"
     },
     "license": "MIT",
     "authors": [
