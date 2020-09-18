@@ -1,0 +1,28 @@
+{
+    "name": "hurah/innovation-app-cli-utils",
+    "description": "Commandline utilities for Hurah and Novum Innovation app",
+    "type": "composer-plugin",
+    "require": {
+        "composer-plugin-api": "^1.1",
+        "symfony/console": "5.1.*",
+        "composer/composer": "1.10.*",
+        "hurah/hurah-installer": "*",
+        ""
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "antonboutkam",
+            "email": "anton@nui-boutkam.nl"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "HurahCli\\": "src"
+        }
+    },
+    "extra": {
+        "class": "HurahCli\\Entrypoint"
+    },
+    "minimum-stability": "dev"
+}
