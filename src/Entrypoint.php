@@ -12,6 +12,8 @@ class Entrypoint implements PluginInterface, Capable
     {
     }
 
+    public function deactivate(Composer $composer, IOInterface $io){}
+
     public function getCapabilities()
     {
         return [
@@ -19,13 +21,5 @@ class Entrypoint implements PluginInterface, Capable
         ];
     }
 
-    public function deactivate(Composer $composer, IOInterface $io)
-    {
-        // TODO: Implement deactivate() method.
-    }
-
-    public function uninstall(Composer $composer, IOInterface $io)
-    {
-        // TODO: Implement uninstall() method.
-    }
+    public function uninstall(Composer $composer, IOInterface $io){}
 }
