@@ -1,7 +1,7 @@
 <?php
 namespace HurahCli\Package;
 
-use Composer\Command\BaseCommand;
+use HurahCli\BaseCommand;
 use Hi\Helpers\DirectoryStructure;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputInterface;
