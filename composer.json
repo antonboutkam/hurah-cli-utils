@@ -3,6 +3,7 @@
     "description": "Commandline utilities for Hurah and Novum Innovation app",
     "type": "composer-plugin",
     "require": {
+        "novum/innovation-app-core": "*",
         "composer-plugin-api": "^1.1",
         "symfony/console": "5.2.*.*",
         "composer/composer": "1.10.*",

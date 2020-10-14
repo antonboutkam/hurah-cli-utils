@@ -2,6 +2,9 @@
 namespace HurahCli\Database\Initializer;
 
 
+use Cli\CodeGen\System\Configs;
+use Cli\CodeGen\System\Databases;
+use Cli\Tools\VO\SystemBuildVo;
 use Hi\Helpers\DirectoryStructure;
 use HurahCli\Database\Generic\DbLogin;
 use Symfony\Component\Console\Helper\QuestionHelper;
@@ -123,10 +126,6 @@ class Main
             return new DbLogin($aEnvFile['DB_USER'], $aEnvFile['DB_PASS'], $aEnvFile['DB_HOST']);
         }
     }
-    function createUser()
-    {
-
-    }
 
     function run()
     {
@@ -170,6 +169,19 @@ class Main
             {
                 $this->output->writeln("<info>{$oDomainLogin->getUser()}</info> has access to database <info>{$oDomainLogin->getDbName()}</info>");
             }
+
+
+            echo "Creating propel source config " . PHP_EOL;
+            $oSytemBuildVo = new SystemBuildVo([
+                'build_dir' => $sDomain,
+                'config_folder' => $sDomain,
+                'db_server' => $oDomainLogin->getHost(),
+                'db_name' => $oDomainLogin->getDbName(),
+                'password' => $oDomainLogin->getPass(),
+            ]);
+            $oConfigMaker = new Configs();
+            $oConfigMaker->create($oSytemBuildVo);
+
         }
 
 
